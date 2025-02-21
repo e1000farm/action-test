@@ -16,6 +16,11 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./dist
 
+      - name: config
+        run: |
+          git config --global user.email "e1000farm@gmail.com"
+          git config --global user.name "e1000farm"
+
       - name: install
         run: yarn install
 
