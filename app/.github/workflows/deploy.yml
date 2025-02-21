@@ -7,13 +7,22 @@ on:
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }} # 배포된 페이지의 URL
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: checkout
+        uses: actions/checkout@v4
 
-      - run: yarn install
-      - run: yarn build
-      - run: yarn deploy
+      - name: install
+        run: yarn install
+
+      - name: build
+        run: yarn build
+
+      - name: deploy
+        run: yarn deploy
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
