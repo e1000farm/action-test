@@ -11,10 +11,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.ACCESS_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./dist
 
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.5.3
