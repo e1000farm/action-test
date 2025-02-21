@@ -12,12 +12,6 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
 
-      - name: Set Git user info
-        run: |
-          git config --global user.email "e1000farm@gamil.com"
-          git config --global user.name "e1000farm"
-          git config --global credential.helper wincred
-
       - name: install
         run: yarn install
 
