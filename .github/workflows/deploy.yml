@@ -16,6 +16,7 @@ jobs:
         run: |
           git config --global user.email "e1000farm@gmail.com"
           git config --global user.name "e1000farm"
+          git config --global credential.helper wincred
 
       - name: install
         run: yarn install
