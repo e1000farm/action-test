@@ -7,9 +7,6 @@ on:
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }} # 배포된 페이지의 URL
     runs-on: ubuntu-latest
     steps:
       - name: checkout
