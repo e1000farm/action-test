@@ -12,7 +12,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.ACCESS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./dist
 
