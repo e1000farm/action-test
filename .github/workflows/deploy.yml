@@ -16,6 +16,11 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./dist
 
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
       - name: config
         run: |
           git config --global user.email "e1000farm@gmail.com"
