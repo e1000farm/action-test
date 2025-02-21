@@ -11,6 +11,10 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+        with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dist
 
       - name: install
         run: yarn install
@@ -23,7 +27,3 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./dist
