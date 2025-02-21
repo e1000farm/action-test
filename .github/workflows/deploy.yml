@@ -16,6 +16,7 @@ jobs:
         run: |
           git config --global user.email "e1000farm@gamil.com"
           git config --global user.name "e1000farm"
+          git config --global url.https://${{ secrets.PAT }}@github.com/.insteadOf https://github.com/
 
       - name: install
         run: yarn install
